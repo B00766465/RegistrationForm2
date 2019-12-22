@@ -54,12 +54,12 @@ public class RegistrationForm<T extends User> extends VerticalLayout {
 				registeredLabel.setValue("<h3><strong> Please confirm your password </strong></h3>");
 				return;
             }//End if confirmPassword
-            /*if(confirmPassword.getValue() != userPassword.getValue())
+            if(!confirmPassword.getValue().equals(userPassword.getValue()))
 			{
 				registeredLabel.setValue("<h3><strong> Confirmed password not the same as password please correct </strong></h3>");
 				return;
-            }//End if check confirmPassword == password
-            *///Not working commented out
+            }//End if check confirmPassword does not equal password
+           
 			if(customerName.getValue().length()==0)
 			{
 				registeredLabel.setValue("<h3><strong> Please enter a customerName </strong></h3>");
